@@ -1,6 +1,6 @@
 # Create React Component
 
-A VS Code extension for creating new React components
+A VS Code extension for creating React components
 
 ![Demo](https://s8.gifyu.com/images/demobd5a5f3833b61d92.gif)
 
