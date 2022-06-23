@@ -1,12 +1,16 @@
 {
-	"name": "create-react-component",
+	"name": "create-react-comp",
 	"displayName": "Create React Component",
-	"description": "A VS Code extension for generating new React component folder with selected options",
+	"description": "A VS Code extension for creating React components",
 	"version": "0.0.1",
 	"publisher": "bogachenkov",
 	"author": {
 		"name": "Nikita Bogachenkov",
 		"email": "nik.bogachenkov@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bogachenkov/create-react-component.git"
 	},
 	"engines": {
 		"vscode": "^1.68.0"
@@ -16,7 +20,9 @@
 	],
 	"keywords": [
 		"create react component",
-		"generate react component"
+		"generate react component",
+		"react styling",
+		"reactjs"
 	],
 	"activationEvents": [
 		"onCommand:extension.createComponent"
