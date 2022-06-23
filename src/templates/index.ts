@@ -1,0 +1,1 @@
+export const INDEX_TEMPLATE = `export { default } from './{{ componentName }}';`;

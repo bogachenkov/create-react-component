@@ -1,0 +1,65 @@
+{
+	"name": "create-react-component",
+	"displayName": "Create React Component",
+	"description": "A VS Code extension for generating new React component folder with selected options",
+	"version": "0.0.1",
+	"publisher": "bogachenkov",
+	"author": {
+		"name": "Nikita Bogachenkov",
+		"email": "nik.bogachenkov@gmail.com"
+	},
+	"engines": {
+		"vscode": "^1.68.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"keywords": [
+		"create react component",
+		"generate react component"
+	],
+	"activationEvents": [
+		"onCommand:extension.createComponent"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.createComponent",
+				"title": "Create React Component"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.createComponent",
+					"group": "React"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/mustache": "^4.1.3",
+		"@types/node": "16.x",
+		"@types/vscode": "^1.68.0",
+		"@typescript-eslint/eslint-plugin": "^5.27.0",
+		"@typescript-eslint/parser": "^5.27.0",
+		"@vscode/test-electron": "^2.1.3",
+		"eslint": "^8.16.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0",
+		"mustache": "^4.2.0",
+		"typescript": "^4.7.2"
+	}
+}
