@@ -6,4 +6,4 @@ export const validateInput = (input: string): string | null => {
 		return "Only alphabets and numbers allowed";
 	}
 	return null;
-}
+};

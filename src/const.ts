@@ -8,12 +8,12 @@ export type StyleItem = {
   ext: string;
   defaultName?: string;
   template: string;
-}
+};
 
 type Constants = {
   STYLES: StyleItem[],
   STORY: string;
-}
+};
 
 export const CONSTANTS:Constants = {
   STYLES: [
@@ -60,4 +60,4 @@ export const CONSTANTS:Constants = {
     }
   ],
   STORY: 'Create Storybook file?'
-}
+};

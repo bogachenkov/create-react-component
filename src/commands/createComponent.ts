@@ -12,7 +12,6 @@ import { capitalizeString } from '../utils/capitalize';
 export const createComponent = async ({fsPath}: {fsPath: string}) => {
 
 	const componentNameOptions: vscode.InputBoxOptions = {
-		prompt: `Component will be created at ${fsPath}`,
 		placeHolder: "Enter Component Name",
 		validateInput,
 		ignoreFocusOut: true

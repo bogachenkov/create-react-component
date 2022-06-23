@@ -16,5 +16,5 @@ const {{componentName}}:React.FC<I{{componentName}}Props> = (props) => {
 
 export default {{componentName}};
 `
-  )
-}
+  );
+};

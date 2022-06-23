@@ -2,7 +2,7 @@
 	"name": "create-react-comp",
 	"displayName": "Create React Component",
 	"description": "A VS Code extension for creating React components",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "bogachenkov",
 	"author": {
 		"name": "Nikita Bogachenkov",
@@ -65,7 +65,9 @@
 		"eslint": "^8.16.0",
 		"glob": "^8.0.3",
 		"mocha": "^10.0.0",
-		"mustache": "^4.2.0",
 		"typescript": "^4.7.2"
+	},
+	"dependencies": {
+		"mustache": "^4.2.0"
 	}
 }

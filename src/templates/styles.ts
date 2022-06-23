@@ -5,4 +5,4 @@ export const STYLING_TEMPLATES = {
   CSS_MODULES: ``,
   STYLUS: ``,
   STYLED_COMPONENTS: `import styled from "styled-components";`
-}
+};

@@ -23,7 +23,7 @@ const writeFile = (
     ),
     mustache.render(template, {componentName})
   );
-}
+};
 
 const buildStylingTemplate = (style: StyleItem, folder: string, name: string) => {
   writeFile(
@@ -33,15 +33,15 @@ const buildStylingTemplate = (style: StyleItem, folder: string, name: string) =>
     style.template, 
     name
   );
-}
+};
 
 const buildStoryTemplate = (folder: string, name: string) => {
   writeFile(folder, name, 'stories.tsx', STORIES_TEMPLATE, name);
-}
+};
 
 const buildIndexFile = (folder: string, name: string) => {
   writeFile(folder, 'index', 'ts', INDEX_TEMPLATE, name);
-}
+};
 
 const buildComponentFile = (folder: string, name: string, styleOption: StyleItem) => {
   let stylesImportLine = `import './${styleOption.defaultName}.${styleOption.ext}';\n`;
@@ -54,7 +54,7 @@ const buildComponentFile = (folder: string, name: string, styleOption: StyleItem
 
   const template = createComponentTemplate(stylesImportLine);
   writeFile(folder, name, 'tsx', template, name);
-}
+};
 
 export const buildTemplate:(features: [StyleItem, string], name: string, folder: string) => void = (
   [styleType, storyBook],
@@ -63,9 +63,13 @@ export const buildTemplate:(features: [StyleItem, string], name: string, folder:
 ) => {
   try {
     buildIndexFile(folder, name);
-    if (styleType) buildStylingTemplate(styleType, folder, name);
+    if (styleType) {
+      buildStylingTemplate(styleType, folder, name);
+    }
     buildComponentFile(folder, name, styleType!);
-    if (storyBook === 'Yes') buildStoryTemplate(folder, name);
+    if (storyBook === 'Yes') {
+      buildStoryTemplate(folder, name);
+    }
   } catch (error) {
     vscode.window.showErrorMessage(`Error while building templates. ${error}`);
   }
