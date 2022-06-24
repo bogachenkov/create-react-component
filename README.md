@@ -13,7 +13,7 @@ A VS Code extension for creating React components
       - `NewComponent.stories.tsx` (optional)
 
 ## Features
-  - You can create React Component folder with Typescript
+  - You can quickly generate React Component folder with Typescript
   - You can choose between several styling methods - CSS, CSS Modules, LESS, SASS, Stylus and styled-components
   - Also, you can optionally create a storybook file
 

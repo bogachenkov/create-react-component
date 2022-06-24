@@ -48,7 +48,7 @@ export const CONSTANTS:Constants = {
       value: 'STYLUS',
       label: 'Stylus',
       ext: 'styl',
-      defaultName: 'styles',
+      // defaultName: 'styles',
       template: STYLING_TEMPLATES.STYLUS,
     },
     {
