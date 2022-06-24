@@ -8,6 +8,7 @@
 		"name": "Nikita Bogachenkov",
 		"email": "nik.bogachenkov@gmail.com"
 	},
+	"icon": "images/logo.png",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/bogachenkov/create-react-component.git"
