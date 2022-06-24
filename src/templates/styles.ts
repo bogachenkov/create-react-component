@@ -4,5 +4,5 @@ export const STYLING_TEMPLATES = {
   SCSS: ``,
   CSS_MODULES: ``,
   STYLUS: ``,
-  STYLED_COMPONENTS: `import styled from "styled-components";`
+  STYLED_COMPONENTS: `import styled from 'styled-components';`
 };
