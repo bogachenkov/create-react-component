@@ -1,8 +1,8 @@
 # Create React Component
 
-A VS Code extension for creating React components
+The easy way to create React components
 
-![Demo](https://s8.gifyu.com/images/demobd5a5f3833b61d92.gif)
+![Demo](https://s8.gifyu.com/images/demo-1e29592bb5802fcf4.gif)
 
 ## Structure
   - `ParentFolder`
@@ -11,15 +11,16 @@ A VS Code extension for creating React components
       - `NewComponent.tsx`
       - `NewComponent.module.css` (or any other styling method listed below)
       - `NewComponent.stories.tsx` (optional)
+      - `NewComponent.test.tsx` (optional)
 
 ## Features
-  - You can quickly generate React Component folder with Typescript
-  - You can choose between several styling methods - CSS, CSS Modules, LESS, SASS, Stylus and styled-components
-  - Also, you can optionally create a storybook file
+  - Quickly generate React Component folder with Typescript
+  - You can choose between different styling methods - CSS, CSS Modules, LESS, SASS, Stylus and styled-components
+  - Also, you can optionally create `.stories` and ``.test`` files
 
 ## How it works
 
-  - In the explorer tab of VS Code, right-click on the directory in which you want to create the component.
-  - Select "Create React Component" option.
+  - In the explorer tab of VS Code, right-click on the directory in which you want to create the component
+  - Select "Create React Component" option
   - Enter a component name
   - Select the options you want to use
