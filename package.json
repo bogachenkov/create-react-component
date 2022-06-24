@@ -1,7 +1,7 @@
 {
 	"name": "create-react-comp",
 	"displayName": "Create React Component",
-	"description": "A VS Code extension for creating React components",
+	"description": "Quickly generate React components",
 	"version": "0.0.4",
 	"publisher": "bogachenkov",
 	"author": {
@@ -17,13 +17,15 @@
 		"vscode": "^1.68.0"
 	},
 	"categories": [
-		"Snippets"
+		"Other"
 	],
 	"keywords": [
-		"create react component",
-		"generate react component",
-		"react styling",
-		"reactjs"
+		"react",
+		"create",
+		"generate",
+		"component",
+		"boilerplate",
+		"folder"
 	],
 	"activationEvents": [
 		"onCommand:extension.createComponent"
