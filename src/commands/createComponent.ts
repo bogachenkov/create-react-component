@@ -21,7 +21,7 @@ export const createComponent = async ({fsPath}: {fsPath: string}) => {
 
 	const stylesTypeOptionsConfig: vscode.QuickPickOptions = {
 		canPickMany: false,
-		placeHolder: "Select stylesheet format",
+		placeHolder: "Select Stylesheet Format",
 		ignoreFocusOut: true
 	};
 

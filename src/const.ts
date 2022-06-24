@@ -13,6 +13,7 @@ export type StyleItem = {
 type Constants = {
   STYLES: StyleItem[],
   STORY: string;
+  TESTS: string;
 };
 
 export const CONSTANTS:Constants = {
@@ -59,5 +60,6 @@ export const CONSTANTS:Constants = {
       template: STYLING_TEMPLATES.STYLED_COMPONENTS
     }
   ],
-  STORY: 'Create Storybook file?'
+  STORY: 'Create Stories File?',
+  TESTS: 'Create Tests File?'
 };
