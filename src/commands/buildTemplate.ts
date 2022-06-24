@@ -8,6 +8,8 @@ import { STORIES_TEMPLATE } from "../templates/stories";
 import { createComponentTemplate } from "../templates/component";
 
 import { StyleItem } from '../const';
+import { BoolFlag } from './createComponent';
+import { TESTS_TEMPLATE } from '../templates/testing';
 
 const writeFile = (
   folder: string, 
@@ -35,12 +37,16 @@ const buildStylingTemplate = (style: StyleItem, folder: string, name: string) =>
   );
 };
 
+const buildIndexFile = (folder: string, name: string) => {
+  writeFile(folder, 'index', 'ts', INDEX_TEMPLATE, name);
+};
+
 const buildStoryTemplate = (folder: string, name: string) => {
   writeFile(folder, name, 'stories.tsx', STORIES_TEMPLATE, name);
 };
 
-const buildIndexFile = (folder: string, name: string) => {
-  writeFile(folder, 'index', 'ts', INDEX_TEMPLATE, name);
+const buildTestTemplate = (folder: string, name: string) => {
+  writeFile(folder, name, 'test.tsx', TESTS_TEMPLATE, name);
 };
 
 const buildComponentFile = (folder: string, name: string, styleOption: StyleItem) => {
@@ -56,8 +62,8 @@ const buildComponentFile = (folder: string, name: string, styleOption: StyleItem
   writeFile(folder, name, 'tsx', template, name);
 };
 
-export const buildTemplate:(features: [StyleItem, string], name: string, folder: string) => void = (
-  [styleType, storyBook],
+export const buildTemplate:(features: [StyleItem, BoolFlag, BoolFlag], name: string, folder: string) => void = (
+  [styleType, storyBook, tests],
   name,
   folder
 ) => {
@@ -69,6 +75,9 @@ export const buildTemplate:(features: [StyleItem, string], name: string, folder:
     buildComponentFile(folder, name, styleType!);
     if (storyBook === 'Yes') {
       buildStoryTemplate(folder, name);
+    }
+    if (tests === 'Yes') {
+      buildTestTemplate(folder, name);
     }
   } catch (error) {
     vscode.window.showErrorMessage(`Error while building templates. ${error}`);

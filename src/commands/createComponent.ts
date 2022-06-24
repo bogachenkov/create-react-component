@@ -9,6 +9,8 @@ import { validateInput } from '../utils/inputValidator';
 import { buildTemplate } from './buildTemplate';
 import { capitalizeString } from '../utils/capitalize';
 
+export type BoolFlag = 'Yes' | 'No';
+
 export const createComponent = async ({fsPath}: {fsPath: string}) => {
 
 	const componentNameOptions: vscode.InputBoxOptions = {
@@ -25,12 +27,17 @@ export const createComponent = async ({fsPath}: {fsPath: string}) => {
 		ignoreFocusOut: true
 	};
 
-	type StorybookFlag = 'Yes' | 'No';
   const storybookOptions = ['Yes', 'No'];
-
-  const storybookOptionConfig: vscode.QuickPickOptions = {
+  const storybookOptionsConfig: vscode.QuickPickOptions = {
     canPickMany: false,
     placeHolder: CONSTANTS.STORY,
+    ignoreFocusOut: true
+  }
+
+	const testsOptions = ['Yes', 'No'];
+  const testsOptionsConfig: vscode.QuickPickOptions = {
+    canPickMany: false,
+    placeHolder: CONSTANTS.TESTS,
     ignoreFocusOut: true
   }
 
@@ -42,14 +49,17 @@ export const createComponent = async ({fsPath}: {fsPath: string}) => {
 		const selectedStylesType = await vscode.window.showQuickPick(stylesTypeOptions, stylesTypeOptionsConfig);
 		if (!selectedStylesType) { return };
 
-		const useStoryBookFlag = await vscode.window.showQuickPick(storybookOptions, storybookOptionConfig);
+		const useStoryBookFlag = await vscode.window.showQuickPick(storybookOptions, storybookOptionsConfig);
 		if (!useStoryBookFlag) { return };
+
+		const useTestsFlag = await vscode.window.showQuickPick(testsOptions, testsOptionsConfig);
+		if (!useTestsFlag) { return };
 
 		if(typeof capComponentName === "string") {
 			const folder = path.join(fsPath, capComponentName);
 			
 			const style = CONSTANTS.STYLES.find((item) => item.label === selectedStylesType) ?? CONSTANTS.STYLES[0];
-			const selectedFeatures = [style, useStoryBookFlag] as [StyleItem, StorybookFlag];
+			const selectedFeatures = [style, useStoryBookFlag, useTestsFlag] as [StyleItem, BoolFlag, BoolFlag];
 
 			try {
 				fs.mkdirSync(folder);
