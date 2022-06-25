@@ -1,6 +1,6 @@
 # Create React Component
 
-The easy way to create React components
+⏱️ The easy way to create Component folder with the files you need
 
 ![Demo](https://s8.gifyu.com/images/demo-1e29592bb5802fcf4.gif)
 
@@ -9,9 +9,9 @@ The easy way to create React components
     - `NewComponent`
       - `index.ts`
       - `NewComponent.tsx`
-      - `NewComponent.module.css` (or any other styling method listed below)
-      - `NewComponent.stories.tsx` (optional)
-      - `NewComponent.test.tsx` (optional)
+      - `NewComponent.module.css` (or any other stylesheet format listed below) [optional]
+      - `NewComponent.stories.tsx` [optional]
+      - `NewComponent.test.tsx` [optional]
 
 ## Features
   - Quickly generate React Component folder with Typescript

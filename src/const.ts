@@ -1,6 +1,6 @@
 import { STYLING_TEMPLATES } from "./templates/styles";
 
-type StylingMethods = 'CSS' | 'CSS_MODULES' | 'SASS' | 'LESS' | 'STYLUS' | 'STYLED_COMPONENTS';
+type StylingMethods = 'NO_STYLES' | 'CSS' | 'CSS_MODULES' | 'SASS' | 'LESS' | 'STYLUS' | 'STYLED_COMPONENTS';
 
 export type StyleItem = {
   value: StylingMethods;
@@ -18,6 +18,12 @@ type Constants = {
 
 export const CONSTANTS:Constants = {
   STYLES: [
+    {
+      value: 'NO_STYLES',
+      label: 'No stylesheet',
+      ext: '',
+      template: ''
+    },
     {
       value: 'CSS',
       label: 'CSS',

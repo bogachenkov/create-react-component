@@ -54,7 +54,7 @@ const buildComponentFile = (folder: string, name: string, styleOption: StyleItem
   if (styleOption.value === 'CSS_MODULES' || styleOption.value === 'STYLUS') {
     stylesImportLine = `import styles from './${name}.${styleOption.ext}';\n`;
   }
-  if (styleOption.value === 'STYLED_COMPONENTS') {
+  if (styleOption.value === 'STYLED_COMPONENTS' || styleOption.value === 'NO_STYLES') {
     stylesImportLine = '';
   }
 
@@ -69,7 +69,7 @@ export const buildTemplate:(features: [StyleItem, BoolFlag, BoolFlag], name: str
 ) => {
   try {
     buildIndexFile(folder, name);
-    if (styleType) {
+    if (styleType && styleType.value !== 'NO_STYLES') {
       buildStylingTemplate(styleType, folder, name);
     }
     buildComponentFile(folder, name, styleType!);
