@@ -54,7 +54,10 @@ const buildComponentFile = (folder: string, name: string, styleOption: StyleItem
   if (styleOption.value === 'CSS_MODULES' || styleOption.value === 'STYLUS') {
     stylesImportLine = `import styles from './${name}.${styleOption.ext}';\n`;
   }
-  if (styleOption.value === 'STYLED_COMPONENTS' || styleOption.value === 'NO_STYLES') {
+  if (styleOption.value === 'STYLED_COMPONENTS') {
+    stylesImportLine = `import {} from './${styleOption.defaultName}';\n`
+  }
+  if (styleOption.value === 'NO_STYLES') {
     stylesImportLine = '';
   }
 

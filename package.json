@@ -2,7 +2,7 @@
 	"name": "create-react-comp",
 	"displayName": "Create React Component",
 	"description": "Quickly generate React components",
-	"version": "0.0.5",
+	"version": "0.1.0",
 	"publisher": "bogachenkov",
 	"author": {
 		"name": "Nikita Bogachenkov",
