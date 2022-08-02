@@ -1,5 +1,11 @@
 # Create React Component
 
+<p align="center">
+  <img src="https://badgen.net/vs-marketplace/v/bogachenkov.create-react-comp" />
+  <img src="https://badgen.net/vs-marketplace/i/bogachenkov.create-react-comp" />
+  <img src="https://badgen.net/vs-marketplace/d/bogachenkov.create-react-comp" />
+</p>
+
 ⏱️ The easy way to create Component folder with the files you need
 
 ![Demo](https://s8.gifyu.com/images/demo-1e29592bb5802fcf4.gif)
