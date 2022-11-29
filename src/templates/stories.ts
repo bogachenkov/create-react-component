@@ -1,10 +1,17 @@
 export const STORIES_TEMPLATE = `import {{componentName}} from './{{componentName}}';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
-export default {
+const meta:Meta<typeof {{componentName}}> = {
   title: '{{componentName}}',
   component: {{componentName}},
-} as ComponentMeta<typeof {{componentName}}>;
+};
 
-const Template:ComponentStory<typeof {{componentName}}> = (args) => <{{componentName}} {...args} />;
-`;
+export default meta;
+
+type Story = StoryObj<typeof {{componentName}}>;
+
+export const Default:Story = {
+  render: args => <{{componentName}} {...args} />,
+  args: {}
+};
+`
