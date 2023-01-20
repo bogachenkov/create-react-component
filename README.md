@@ -15,9 +15,10 @@
     - `NewComponent`
       - `index.ts`
       - `NewComponent.tsx`
-      - `NewComponent.module.css` (or any other stylesheet format listed below) [optional]
-      - `NewComponent.stories.tsx` [optional]
-      - `NewComponent.test.tsx` [optional]
+      [Optional files]
+      - `NewComponent.[module.css|css|scss|less|styl|styled.ts]`
+      - `NewComponent.stories.tsx` (for storybook@7.x you need to install the pre-release version of this extension)
+      - `NewComponent.test.tsx`
 
 ## Features
   - Quickly generate React Component folder with Typescript
