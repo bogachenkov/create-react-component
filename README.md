@@ -15,7 +15,7 @@
     - `NewComponent`
       - `index.ts`
       - `NewComponent.tsx`
-      [Optional files]
+      - [Optional files]
       - `NewComponent.[module.css|css|scss|less|styl|styled.ts]`
       - `NewComponent.stories.tsx` (for storybook@7.x you need to install the pre-release version of this extension)
       - `NewComponent.test.tsx`
